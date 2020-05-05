@@ -29,7 +29,7 @@ namespace PayCompute2.Controllers
                 Id = employee.Id,
                 EmployeeNo = employee.EmployeeNo,
                 ImageUrl = employee.ImageUrl,
-                FullName = employee.FirstName,
+                FullName = employee.FullName,
                 Gender = employee.Gender,
                 Designation = employee.Designation,
                 City = employee.City,
@@ -37,7 +37,7 @@ namespace PayCompute2.Controllers
 
 
             }).ToList();
-            return View();
+            return View(employees);
         }
 
         [HttpGet]
@@ -51,7 +51,7 @@ namespace PayCompute2.Controllers
         [ValidateAntiForgeryToken] //Prevents  cross-site  Request Forgery attacks
         public async Task<IActionResult> Create(EmployeeCreateViewModel model)
         {
-
+            
 
             if (ModelState.IsValid)
             {
@@ -76,6 +76,7 @@ namespace PayCompute2.Controllers
                     PaymentMethod = model.PaymentMethod,
                     Postcode = model.Postcode,
                     UnionMember = model.UnionMember
+                    
 
                 };
                 if (model.ImageUrl != null && model.ImageUrl.Length > 0)
@@ -186,7 +187,11 @@ namespace PayCompute2.Controllers
             return View();
         }
 
-        public IActionResult Detail(int id)
+       
+        
+     
+        [HttpGet]
+        public IActionResult Details(int id)
         {
             var employee = _employeeService.GetById(id);
             if (employee == null)
@@ -216,7 +221,36 @@ namespace PayCompute2.Controllers
             };
 
 
-            return View();
+            return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var employee = _employeeService.GetById(id)
+;
+            if (employee ==null)
+            {
+                return NotFound();
+
+            }
+            var model = new EmployeeDeleteViewModel()
+            {
+                Id = employee.Id,
+                FullName = employee.FullName
+            };
+            return View(model);
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(EmployeeDeleteViewModel model)
+        {
+            await _employeeService.Delete(model.Id);
+            
+
+            return RedirectToAction(nameof(Index));
         }
     }
 }

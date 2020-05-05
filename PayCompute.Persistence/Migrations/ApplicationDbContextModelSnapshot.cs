@@ -236,7 +236,7 @@ namespace PayCompute.Persistence.Migrations
                         .IsRequired()
                         .HasMaxLength(50);
 
-                    b.Property<int>("Student");
+                    b.Property<int>("StudentLoan");
 
                     b.Property<int>("UnionMember");
 

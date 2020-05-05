@@ -10,8 +10,8 @@ using PayCompute2.Persistence;
 namespace PayCompute.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200215113052_UpdatedDataBase")]
-    partial class UpdatedDataBase
+    [Migration("20200304161237_resolvedStudentLoanColumn")]
+    partial class resolvedStudentLoanColumn
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -238,7 +238,7 @@ namespace PayCompute.Persistence.Migrations
                         .IsRequired()
                         .HasMaxLength(50);
 
-                    b.Property<int>("Student");
+                    b.Property<int>("StudentLoan");
 
                     b.Property<int>("UnionMember");
 

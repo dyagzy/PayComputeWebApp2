@@ -38,3 +38,9 @@ C:\Users\user\Documents\Pratice_Projects\PayComputeWebApp2\PayCompute2\obj\Debug
 C:\Users\user\Documents\Pratice_Projects\PayComputeWebApp2\PayCompute2\obj\Debug\netcoreapp2.2\PayCompute2.csproj.CopyComplete
 C:\Users\user\Documents\Pratice_Projects\PayComputeWebApp2\PayCompute2\obj\Debug\netcoreapp2.2\PayCompute2.dll
 C:\Users\user\Documents\Pratice_Projects\PayComputeWebApp2\PayCompute2\obj\Debug\netcoreapp2.2\PayCompute2.pdb
+C:\Users\user\Documents\Pratice_Projects\PayComputeWebApp2\PayCompute2\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_demoView.cshtml.g.cs
+C:\Users\user\Documents\Pratice_Projects\PayComputeWebApp2\PayCompute2\obj\Debug\netcoreapp2.2\Razor\Views\Employee\Index.cshtml.g.cs
+C:\Users\user\Documents\Pratice_Projects\PayComputeWebApp2\PayCompute2\obj\Debug\netcoreapp2.2\Razor\Views\Employee\Create.cshtml.g.cs
+C:\Users\user\Documents\Pratice_Projects\PayComputeWebApp2\PayCompute2\obj\Debug\netcoreapp2.2\Razor\Views\Employee\Edit.cshtml.g.cs
+C:\Users\user\Documents\Pratice_Projects\PayComputeWebApp2\PayCompute2\obj\Debug\netcoreapp2.2\Razor\Views\Employee\Details.cshtml.g.cs
+C:\Users\user\Documents\Pratice_Projects\PayComputeWebApp2\PayCompute2\obj\Debug\netcoreapp2.2\Razor\Views\Employee\Delete.cshtml.g.cs

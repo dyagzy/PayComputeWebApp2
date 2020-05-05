@@ -16,12 +16,14 @@
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"/>
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"/>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+
+        <nav class="navbar  border-danger navbar-expand-sm navbar-toggleable-sm navbar-light d-flex flex-row bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">PayCompute2</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">PayComputeWebApp2</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -39,19 +41,93 @@
                 </div>
             </div>
         </nav>
-    </header>
-    <div class="container">
-        <partial name="_CookieConsentPartial" />
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - PayCompute2 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container-scroller">
+        <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row" >
+            <div class="text-center navbar-wrapper d-flex align-items-center justify-content-around justify-content-center">
+                @*<a class="navbar-brand brand-logo">
+                    <img src="~/images/Benz2020.jpg " alt="logo"/>
+                </a>*@
+            </div>
+            <div class="navba-menu-wrapper d-flex align-items-center justify-content-end">
+                <partial name="_LoginPartial"/>
+
+            </div>
+        </nav>
+        <div class="container-fluid page-body-wrapper">
+            <nav class="sidebar sidebar-offcanvaas" id="sidebar">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#Employee" aria-expanded="false">
+                            <i class="fas fa-users fa-lg text-primary" style="margin-right:0.7em"></i>
+                            <span class="menu-title">Employee</span>
+                            <i class="menu-arrow text-primary"></i>
+
+                        </a>
+                        <div class="collapse" id="Employee">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"><a class="nav-item" asp-controller="Employee" asp-action="Create">New Employee</a></li>
+                                <li class="nav-item"><a class="nav-item" asp-controller="Employee" asp-action="Index">All Employee</a></li>
+                            </ul>
+
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#Payroll" aria-expanded="false">
+                            <i class="fas fa-pound-sign fa-lg text-primary" style="margin-right:0.7em"></i>
+                            <span class="menu-title">Payroll</span>
+                            <i class="menu-arrow text-primary"></i>
+
+                        </a>
+                        <div class="collapse" id="Payroll">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"><a class="nav-item" asp-controller="Pay" asp-action="Create">New Pay</a></li>
+                                <li class="nav-item"><a class="nav-item" asp-controller="Pay" asp-action="Index">Payment Records</a></li>
+                            </ul>
+
+                        </div>
+                    </li>
+                </ul>
+
+            </nav>
+            <div class="main-panel">
+                <partial name="_CookieConsentPartial"/>
+                <div class="content-wrapper">
+                    @RenderBody()
+                </div>
+                <div class="footer">
+                    <p>
+                        &copy; @DateTime.UtcNow -Daniel Oyagha -<a asp-area="" asp-controller="Home" asp-action="Privavcy">Call Now</a>
+                    </p>
+
+                </div>
+
+            </div>
+
         </div>
-    </footer>
+
+    </div>
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>

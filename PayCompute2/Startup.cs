@@ -47,6 +47,10 @@ namespace PayCompute2
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddScoped<IEmployeeService, EmployeeService>();
+            services.AddScoped<IPayComputeService, PayComputeService>();
+            services.AddScoped<INationalInsuranceContributionService, NationalInsuranceContributionService>();
+            services.AddScoped<ITaxService, TaxService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

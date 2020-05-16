@@ -10,6 +10,7 @@ namespace PayCompute.Services
     public interface IPayComputeService
     {
         PaymentRecord GetbyId(int id);
+        TaxYear GetTaxYearById( int id);
         IEnumerable<PaymentRecord> GetAll();
         Task CreateAsync(PaymentRecord paymentRecord);
         IEnumerable<SelectListItem> GetAllTaxYear();

@@ -13,7 +13,7 @@ namespace PayCompute.Services.Implementation
     {
         private readonly ApplicationDbContext _context;
         private decimal studentLoan;
-        
+
 
         public EmployeeService(ApplicationDbContext context)
         {
@@ -98,7 +98,7 @@ namespace PayCompute.Services.Implementation
         //    }
         //    return fee;
         //}
-        
+
         public decimal UnionFees(int id)
         {
             var employee = GetById(id);
@@ -112,15 +112,13 @@ namespace PayCompute.Services.Implementation
             {
                 Text = emp.FullName,
                 Value = emp.Id.ToString()
-                
-                
             });
         }
     }
 
 
-    
 
 
-} 
+
+}
 

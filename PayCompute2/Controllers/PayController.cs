@@ -63,7 +63,7 @@ namespace PayCompute2.Controllers
         public IActionResult Create()
         {
 
-            ViewBag.emeployees = _employeeService.GetAllEmployeesForPayRoll();
+            ViewBag.employees = _employeeService.GetAllEmployeesForPayRoll();
             ViewBag.taxYear = _payComputeService.GetAllTaxYear();
             var model = new PaymentRecordCreateViewModel();
             return View(model);
@@ -106,7 +106,7 @@ namespace PayCompute2.Controllers
                 return RedirectToAction(nameof(Index));
 
             }
-            ViewBag.emeployees = _employeeService.GetAllEmployeesForPayRoll();
+            ViewBag.employees = _employeeService.GetAllEmployeesForPayRoll();
             ViewBag.taxYear = _payComputeService.GetAllTaxYear();
             return View();
         }

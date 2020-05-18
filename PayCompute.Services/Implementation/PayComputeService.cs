@@ -44,7 +44,7 @@ namespace PayCompute.Services.Implementation
 
         public IEnumerable<SelectListItem> GetAllTaxYear()
         {
-            var allTaxYear = _context.TaxYears.Select(taxYear => new SelectListItem
+            var allTaxYear = _context.TaxYears.Select(taxYear => new SelectListItem ()
             {
                 Text = taxYear.YearOfTax,
                 Value = taxYear.Id.ToString()

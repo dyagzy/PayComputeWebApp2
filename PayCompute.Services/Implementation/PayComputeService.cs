@@ -78,10 +78,9 @@ namespace PayCompute.Services.Implementation
             return overtimeHours;
         }
 
-        public decimal OvertimeRate(decimal hourlyRate)
-        {
-            throw new NotImplementedException();
-        }
+        public decimal OvertimeRate(decimal hourlyRate) => hourlyRate * 1.5m;
+
+
 
         public decimal TotalDeduction(decimal tax, decimal nic, decimal studentLoanRepayment, decimal unionFees)
             => tax + nic + unionFees + studentLoanRepayment;

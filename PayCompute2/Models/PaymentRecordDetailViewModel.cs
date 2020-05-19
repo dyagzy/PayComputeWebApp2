@@ -17,7 +17,8 @@ namespace PayCompute2.Models
         public string FullName { get; set; }
         public string NiNo { get; set; }
         [DataType(DataType.Date), Display(Name = "Pay Date")]
-        public DateTime PayDate { get; set; } 
+        public DateTime PayDate { get; set; }
+        [Display(Name = "Pay Month")]
         public string PayMonth { get; set; }
         [Display(Name = "Tax Year")]
         public int TaxYearId { get; set; }

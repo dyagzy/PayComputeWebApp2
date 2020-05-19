@@ -46,3 +46,5 @@ C:\Users\user\Documents\Pratice_Projects\PayComputeWebApp2\PayCompute2\obj\Debug
 C:\Users\user\Documents\Pratice_Projects\PayComputeWebApp2\PayCompute2\obj\Debug\netcoreapp2.2\Razor\Views\Employee\Delete.cshtml.g.cs
 C:\Users\user\Documents\Pratice_Projects\PayComputeWebApp2\PayCompute2\obj\Debug\netcoreapp2.2\Razor\Views\Pay\Index.cshtml.g.cs
 C:\Users\user\Documents\Pratice_Projects\PayComputeWebApp2\PayCompute2\obj\Debug\netcoreapp2.2\Razor\Views\Pay\Create.cshtml.g.cs
+C:\Users\user\Documents\Pratice_Projects\PayComputeWebApp2\PayCompute2\obj\Debug\netcoreapp2.2\Razor\Views\Pay\Detail.cshtml.g.cs
+C:\Users\user\Documents\Pratice_Projects\PayComputeWebApp2\PayCompute2\obj\Debug\netcoreapp2.2\Razor\Views\Pay\Allow.cshtml.g.cs

@@ -48,3 +48,5 @@ C:\Users\user\Documents\Pratice_Projects\PayComputeWebApp2\PayCompute2\obj\Debug
 C:\Users\user\Documents\Pratice_Projects\PayComputeWebApp2\PayCompute2\obj\Debug\netcoreapp2.2\Razor\Views\Pay\Create.cshtml.g.cs
 C:\Users\user\Documents\Pratice_Projects\PayComputeWebApp2\PayCompute2\obj\Debug\netcoreapp2.2\Razor\Views\Pay\Detail.cshtml.g.cs
 C:\Users\user\Documents\Pratice_Projects\PayComputeWebApp2\PayCompute2\obj\Debug\netcoreapp2.2\Razor\Views\Pay\Payslip.cshtml.g.cs
+C:\Users\user\Documents\Pratice_Projects\PayComputeWebApp2\PayCompute2\bin\Debug\netcoreapp2.2\WkHtmlToPdf\wkhtmltoimage.exe
+C:\Users\user\Documents\Pratice_Projects\PayComputeWebApp2\PayCompute2\bin\Debug\netcoreapp2.2\WkHtmlToPdf\wkhtmltopdf.exe

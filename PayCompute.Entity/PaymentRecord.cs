@@ -39,6 +39,8 @@ namespace PayCompute.Entity
         public decimal OvertimeEarnings { get; set; }
         [Column(TypeName = "Money")]
         public decimal Tax { get; set; }
+
+        [Column(TypeName = "decimal (18,2)")]
         public decimal NIC { get; set; }
         [Column(TypeName = "Money")]
         public decimal? UnionFee { get; set; }

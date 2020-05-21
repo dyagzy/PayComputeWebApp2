@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PayCompute.Entity;
 using PayCompute.Services;
 using PayCompute2.Models;
@@ -10,6 +11,8 @@ using System.Threading.Tasks;
 
 namespace PayCompute2.Controllers
 {
+    [Authorize(Roles="Admin, Manager")]
+
     public class PayController : Controller
     {
         private readonly IPayComputeService _payComputeService;
@@ -61,6 +64,7 @@ namespace PayCompute2.Controllers
 
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
 
@@ -72,6 +76,7 @@ namespace PayCompute2.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create(PaymentRecordCreateViewModel model)
         {
             if (ModelState.IsValid)
@@ -155,6 +160,7 @@ namespace PayCompute2.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult Payslip(int id)
         {
             var paymentRecord = _payComputeService.GetbyId(id);
